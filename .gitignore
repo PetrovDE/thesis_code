@@ -2,3 +2,5 @@
 /.idea
 /.env
 /wandb/
+/test_langchain.ipynb
+/key.txt
