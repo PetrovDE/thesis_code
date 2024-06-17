@@ -69,8 +69,8 @@ class LLM:
             output_messages_key="answer",
         )
 
-        answer = conversational_rag_chain.stream(
+        answer = conversational_rag_chain.invoke(
             {"input": prompt},
             config={"configurable": {"session_id": session}},
         )
-        return answer
+        return answer['answer']

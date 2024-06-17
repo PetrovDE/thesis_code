@@ -60,6 +60,7 @@ if upload_files:
             st.markdown(prompt)
 
         with st.chat_message("assistant"):
-            stream = st.write_stream(llm.generate_answer(docs, prompt, session))
+            stream = llm.generate_answer(docs, prompt)
+            st.markdown(stream)
 
         st.session_state.messages.append({"role": "assistant", "content": stream})
